@@ -1,0 +1,37 @@
+input {
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  padding: 6px;
+  margin-bottom: 0.5rem;
+  width: 38vw;
+}
+
+button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  padding: 4px 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.count {
+  font-size: 0.9rem;
+}
+
+.boxBlue {
+  background: #f0f8ff;
+  border-color: #1a73e8;
+}
+.boxGreen {
+  background: #f4fbf6;
+  border-color: #28a745;
+}
+.buttonBlue {
+  background: #1a73e8;
+}
+.buttonGreen {
+  background: #28a745;
+}

@@ -1,0 +1,51 @@
+<h2>Parent Component</h2>
+<div class="container">
+  <div class="container__box">
+    <div class="container__box-title">Users</div>
+    <div class="container__box-table">
+      <table>
+        <tr>
+          <th>User Name:</th>
+          <th class="removeBtn" (click)="onRemoveUsers()">Remove</th>
+        </tr>
+        <tr *ngFor="let user of users; index as i">
+          <td>{{ user }}</td>
+          <td class="removeBtn" (click)="onRemoveUser(i)">Remove</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="container__box">
+    <div class="container__box-title">Admins</div>
+    <div class="container__box-table">
+      <table>
+        <tr>
+          <th>Admin Name:</th>
+          <th class="removeBtn" (click)="onRemoveAdmins()">Remove</th>
+        </tr>
+        <tr *ngFor="let admin of admins; index as i">
+          <td>{{ admin }}</td>
+          <td class="removeBtn" (click)="onRemoveAdmin(i)">Remove</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<h2>Child Component</h2>
+<div class="container">
+  <app-child
+    [boxColor]="'blue'"
+    [placeholderText]="'Create User'"
+    [count]="countDataUsers"
+    (inputEvent)="pushUsers($event)"
+  >
+  </app-child>
+  <app-child
+    [boxColor]="'green'"
+    [placeholderText]="'Create Admin'"
+    [count]="countDataAdmins"
+    (inputEvent)="pushAdmins($event)"
+  >
+  </app-child>
+</div>
